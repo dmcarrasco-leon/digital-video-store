@@ -24,23 +24,7 @@ const HeroSection = () => {
             .catch((err) => {
                 console.log(`Error ${err}`);
             })
-
-
     }, [])
-
-
-    const styles = {
-        card: {
-            backgroundColor: '#B7E0F2',
-            borderRadius: 55,
-            padding: '3rem'
-        },
-        cardImage: {
-            objectFit: 'scale-down',
-            width: '200px',
-            height: '300px'
-        }
-    }
 
     return (
         <div className="grid grid-col-4" class="p-3 mb-2 bg-black text-white">

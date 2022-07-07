@@ -18,7 +18,6 @@ const MovieDetailsPage = () => {
 
     })
 
-
     const { id } = useParams();
 
 
@@ -36,17 +35,14 @@ const MovieDetailsPage = () => {
             .catch((err) => {
                 console.log(`Error ${err}`);
             })
-
-
     }, [])
+
     return (
         <>
-
             <Header />
-            <div id="container2" class="p-3 mb-2 bg-dark text-white">
+            <div id="container2" class="p-2 mb-2 bg-dark text-white">
             <main>
-                
-
+ 
                     <Container >
                         <div style={{ display: 'block', width: 700, padding: 30 }}>
                             <Row>
@@ -73,9 +69,7 @@ const MovieDetailsPage = () => {
                                         Details : {product.details}
                                     </p>
                                 </Col>
-                                <Col >
-                                    Sample Third Col
-                                </Col>
+
                             </Row>
                         </div>
                     </Container>
@@ -84,7 +78,7 @@ const MovieDetailsPage = () => {
             <Footer/>
             </div>
         </>
-    )
+    );
 }
 
-export default MovieDetailsPage
+export default MovieDetailsPage;

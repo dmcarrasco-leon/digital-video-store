@@ -43,3 +43,11 @@
   height: 20vmin;
   pointer-events: none;
   }
+
+  .App-div-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+  }
+  

@@ -4,11 +4,8 @@ import FeaturedMovieSeccion from "../components/FeaturedMovieSection";
 import ecommerceContext from '../context/EcommerceContext';
 import Footer from '../components/Footer';
 import HeroSection from '../components/HeroSection';
-//import MovieListingPage from './MovieListingPage';
 import FeaturedTvShowsSection from '../components/FeaturedTvShowsSection';
-import MovieListingPage from './MovieListingPage';
 import ContentSection from '../components/ContentSection';
-//import { Link } from 'react-router-dom';
 
 const HomePage = () => {
 
@@ -31,8 +28,6 @@ const HomePage = () => {
             .catch((err) => {
                 console.log(`Error ${err}`);
             })
-
-
     }, [])
 
     return (
@@ -47,6 +42,7 @@ const HomePage = () => {
                     <ContentSection/>
                 </div>
             </main>
+            
             <Footer />
         </div>
     );
