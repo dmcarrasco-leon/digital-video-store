@@ -46,7 +46,7 @@ const Footer = () => {
                         <p>Contact Us</p>
                         <p>Advertise</p>
                         <p>Accessibility</p>
-                        <p>Jobss</p>
+                        <p>Jobs</p>
                     </Col>
 
                     <Col >
