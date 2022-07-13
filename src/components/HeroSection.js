@@ -11,9 +11,7 @@ const HeroSection = () => {
     useEffect(() => {
 
         //Async operation GET
-        fetch("https://limitless-gorge-72140.herokuapp.com/products?isBestSeller=true", {
-            method: "GET"
-        })
+        fetch("https://limitless-gorge-72140.herokuapp.com/products?isBestSeller=true")
             .then((res) => {
 
                 return res.json()

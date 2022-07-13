@@ -23,9 +23,7 @@ const MovieListingPage = () => {
     useEffect(() => {
 
         //Async operation GET
-        fetch("https://limitless-gorge-72140.herokuapp.com/products", {
-            method: "GET"
-        })
+        fetch("https://limitless-gorge-72140.herokuapp.com/products")
             .then((res) => {
 
                 return res.json()

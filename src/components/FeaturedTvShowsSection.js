@@ -12,9 +12,7 @@ const FeaturedTvShowsSection = () => {
     useEffect(() => {
 
         //Async operation GET
-        fetch("https://limitless-gorge-72140.herokuapp.com/products?isBestSeller=false", {
-            method: "GET"
-        })
+        fetch("https://limitless-gorge-72140.herokuapp.com/products?isBestSeller=false")
             .then((res) => {
 
                 return res.json()
