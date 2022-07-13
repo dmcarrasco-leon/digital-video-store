@@ -1,9 +1,6 @@
 import React from 'react';
 import { Container, Row, Col } from "react-bootstrap";
-import { FaFacebook } from "react-icons/fa";
-import { BsTwitter } from "react-icons/bs";
-import { BsLinkedin } from "react-icons/bs";
-import { BsYoutube } from "react-icons/bs";
+
 
 
 const Footer = () => {
@@ -49,12 +46,6 @@ const Footer = () => {
                         <p>Jobss</p>
                     </Col>
 
-                    <Col >
-                        <FaFacebook size={42} className="icon-cursor  icon-size-dbl-xlg grid-x-right" />
-                        <BsTwitter size={42} className="icon-cursor  icon-size-dbl-xlg grid-x-right" />
-                        <BsLinkedin size={42} className="icon-cursor  icon-size-dbl-xlg grid-x-right" />
-                        <BsYoutube size={42} className="icon-cursor  icon-size-dbl-xlg grid-x-right" />
-                    </Col>
 
                 </Row>
                 <Row>
