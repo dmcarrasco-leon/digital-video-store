@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Row, Col } from "react-bootstrap";
-
+import SocialFollow from "./SocialFollow"
 
 
 const Footer = () => {
@@ -46,7 +46,9 @@ const Footer = () => {
                         <p>Jobss</p>
                     </Col>
 
-
+                    <Col>
+                        <SocialFollow />
+                    </Col>
                 </Row>
                 <Row>
 
