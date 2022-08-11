@@ -10,13 +10,16 @@ const FeaturedMovieSection = () => {
     useEffect(() => {
 
         //Async operation GET
-        fetch("https://limitless-gorge-72140.herokuapp.com/products?isBestSeller=true")
+        //fetch("https://limitless-gorge-72140.herokuapp.com/products?isBestSeller=true")
+        //fetch("http://localhost:5000/products/featured?type=movie")
+        fetch("https://danny-rest-api-mongodb.herokuapp.com/products/featured?type=movie")
             .then((res) => {
 
                 return res.json()
             })
             .then(json => {
-                setProducts(json);
+                setProducts(json.body);
+                //console.log(products);
             })
             .catch((err) => {
                 console.log(`Error ${err}`);
@@ -29,7 +32,7 @@ const FeaturedMovieSection = () => {
             <div id="product-rows-area"  >
                 <Container>
                     <Row xs="auto">
-                        {products.map((product) => (<Product id={product.id} image={product.image} />))}
+                        {products.map((product) => (<Product id={product.id} smallImage={product.smallImage} />))}
                     </Row>
                 </Container>
             </div>

@@ -14,6 +14,35 @@ const Header = () => {
     <LoginForm />
   }
 
+  const [auth, setAuth] = useState(
+    {
+      "username": "",
+      "password": ""
+    })
+
+    const SubmitForm = (event) => {
+      //console.log(auth);
+      //alert(auth);
+      
+      event.preventDefault();
+      fetch("https://danny-rest-api-mongodb.herokuapp.com/auth", {
+        method: "POST",
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(auth)
+      })
+        .then((res) => res.json())
+        .then(json => {
+          alert(`The user ${json.username} was login successfully!!!`)
+        })
+        .catch((err) => {
+          console.log(`Error ${err}`);
+        })
+        alert(" done ");
+        
+    }
+
   return (
     <header>
       <Navbar collapseOnSelect expand="lg" bg="primary" variant="dark">
@@ -25,29 +54,33 @@ const Header = () => {
             <Nav className="me-auto">
 
               <Nav.Link href="/pages/movielistingpage">Movies</Nav.Link>
-              <Nav.Link href="#pricing">TV</Nav.Link>
+              <Nav.Link href="/pages/tvshowlistingpage">TV Shows</Nav.Link>
 
             </Nav>
             <Nav>
 
               <Nav.Link href="/products/registrationForm"> Sign Up</Nav.Link>
-
-              <Nav.Link eventKey={2} onClick={handleShow} >
-                Login
-              </Nav.Link>
+              <Nav.Link href="/products/loginForm"> Login</Nav.Link>
+              <Nav.Link href="/products/productsearch"> Search </Nav.Link>
 
               <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
                   <Modal.Title>Login In to Dcarrasco</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                  <Form>
+                  <Form action='https://danny-rest-api-mongodb.herokuapp.com/auth' method='POST' onSubmit={SubmitForm}>
                     <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
 
                       <Form.Control
-                        type="email"
-                        placeholder="Email"
+                        type="text"
+                        placeholder="username"
                         autoFocus
+                        value={auth.username} onChange={(event) => {
+                          setAuth({
+                            ...auth,
+                            username: event.target.value
+                          })
+                        }} 
                       />
 
                     </Form.Group>
@@ -58,7 +91,14 @@ const Header = () => {
 
                       <Form.Control type="password"
                         placeholder="Password"
-                        autoFocus />
+                        autoFocus 
+                        value={auth.password} 
+                        onChange={(event) => {
+                          setAuth({
+                            ...auth,
+                            password: event.target.value
+                          })
+                        }} />
                     </Form.Group>
 
                   </Form>
@@ -68,7 +108,7 @@ const Header = () => {
                   <Button variant="secondary" onClick={handleClose}>
                     Create a new account
                   </Button>
-                  <Button variant="primary" onClick={handleClose}>
+                  <Button variant="primary" type="submit" onClick={handleClose} >
                     Sign In
                   </Button>
                 </Modal.Footer>

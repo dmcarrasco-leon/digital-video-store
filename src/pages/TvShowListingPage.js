@@ -7,7 +7,7 @@ import Header from "../components/Header";
 import Footer from '../components/Footer';
 import Product from '../components/Product';
 
-const MovieListingPage = () => {
+const TvShowListingPage = () => {
     //Here I am going to use the context that was provided in the ContextPRovider
     //const { products, setProducts } = useContext(ecommerceContext);
     const [radioValue, setRadioValue] = useState('1');
@@ -24,9 +24,8 @@ const MovieListingPage = () => {
         setProducts([]);
         //Async operation GET
         //fetch("https://limitless-gorge-72140.herokuapp.com/products")
-        //fetch("http://localhost:5000/products/type?type=movie")
-        fetch("https://danny-rest-api-mongodb.herokuapp.com/products/type?type=movie")
-
+        fetch("https://danny-rest-api-mongodb.herokuapp.com/products/type?type=tv show")
+            
             .then((res) => {
 
                 return res.json()
@@ -84,4 +83,4 @@ const MovieListingPage = () => {
     );
 }
 
-export default MovieListingPage;
+export default TvShowListingPage;

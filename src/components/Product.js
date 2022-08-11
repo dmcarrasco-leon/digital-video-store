@@ -1,8 +1,8 @@
-import React, { useContext } from 'react'
+import React from 'react'
 //import ecommerceContext from '../context/EcommerceContext';
 import { Link } from 'react-router-dom';
 
-const Product = ({ id, image }) => {
+const Product = ({ id, smallImage }) => {
 
     return (
 
@@ -11,8 +11,8 @@ const Product = ({ id, image }) => {
                 <p>
 
                     <span>
-                        <Link to={`products/${id}`}>
-                            <img className="product-image" src={image} />
+                        <Link to={`products/${id}`} >
+                            <img className="product-image" src={smallImage} />
                         </Link>
                     </span>
                 </p>

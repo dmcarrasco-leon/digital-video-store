@@ -15,13 +15,14 @@ const HomePage = () => {
     useEffect(() => {
 
         //Async operation  GET//POST,PUT OR DELETE
-        fetch("https://limitless-gorge-72140.herokuapp.com/products")
+        //fetch("https://limitless-gorge-72140.herokuapp.com/products")
+        fetch("https://danny-rest-api-mongodb.herokuapp.com/products")
             .then((res) => {
 
                 return res.json()
             })
             .then(json => {
-                setProducts(json);
+                setProducts(json.body);
             })
             .catch((err) => {
                 console.log(`Error ${err}`);
@@ -29,6 +30,26 @@ const HomePage = () => {
     }, [])
 
     return (
+        <div id="container" >
+            <Header />
+
+            <main>
+            <HeroSection />
+                <div id="container2" class="p-3 mb-2 bg-dark text-white">
+                    <FeaturedMovieSeccion />
+                    <FeaturedTvShowsSection/>
+                    <ContentSection/>
+                </div>
+            </main>
+            
+            <Footer />
+        </div>
+    );
+}
+
+export default HomePage;
+
+/*   return (
         <div id="container" >
             <Header />
 
@@ -43,7 +64,4 @@ const HomePage = () => {
             
             <Footer />
         </div>
-    );
-}
-
-export default HomePage;
+        */

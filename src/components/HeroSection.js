@@ -11,13 +11,15 @@ const HeroSection = () => {
     useEffect(() => {
 
         //Async operation GET
-        fetch("https://limitless-gorge-72140.herokuapp.com/products?isBestSeller=true")
+        //fetch("https://limitless-gorge-72140.herokuapp.com/products?isBestSeller=true")
+        fetch("https://danny-rest-api-mongodb.herokuapp.com/products/bestseller")
+
             .then((res) => {
 
                 return res.json()
             })
             .then(json => {
-                setProducts(json);
+                setProducts(json.body);
             })
             .catch((err) => {
                 console.log(`Error ${err}`);
