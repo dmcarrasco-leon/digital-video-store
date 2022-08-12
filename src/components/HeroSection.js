@@ -34,7 +34,7 @@ const HeroSection = () => {
                 <Container>
                     <Row xs="auto">
                        
-                        {products.map((product) => (<Product id={product.id} key={product.id} title={product.title} qty={product.qty} rentPrice={product.rentPrice} image={product.image} />))}
+                        {products.map((product) => (<Product id={product.id} key={product.id} title={product.title}  rentPrice={product.rentPrice} smallImage={product.smallImage} />))}
                     </Row>
                     <Carousel.Caption>
                     <p>caption</p>

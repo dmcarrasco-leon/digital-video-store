@@ -74,12 +74,12 @@ const App = () => {
           <Route path = "/featuredMovieSection" element = {<FeaturedMovieSection/>}/>
           <Route path = "/movielistingpage" element = {<MovieListingPage/>}/>
           <Route path = "/tvshowlistingpage" element = {<TvShowListingPage/>}/>
-          <Route path = "/pages/contentSection" element = {<ContentSection/>}/>
+          <Route path = "/contentSection" element = {<ContentSection/>}/>
           
-          <Route path = "/products/LoginForm" element = {<LoginForm/> } />
-          <Route path = "/products/registrationForm" element = {<RegistrationForm/> } />
-          <Route path = "/pages/dashboardpage" element = {<DashboardPage/> } />
-          <Route path = "/products/productsearch" element = {<ProductSearch/> } />
+          <Route path = "/LoginForm" element = {<LoginForm/> } />
+          <Route path = "/registrationForm" element = {<RegistrationForm/> } />
+          <Route path = "/dashboardpage" element = {<DashboardPage/> } />
+          <Route path = "/productsearch" element = {<ProductSearch/> } />
           
           <Route path = "/products" element = {<Product/> } />
           

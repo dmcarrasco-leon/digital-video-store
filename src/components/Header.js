@@ -59,9 +59,9 @@ const Header = () => {
             </Nav>
             <Nav>
 
-              <Nav.Link href="/products/registrationForm"> Sign Up</Nav.Link>
-              <Nav.Link href="/products/loginForm"> Login</Nav.Link>
-              <Nav.Link href="/products/productsearch"> Search </Nav.Link>
+              <Nav.Link href="/registrationForm"> Sign Up</Nav.Link>
+              <Nav.Link href="/loginForm"> Login</Nav.Link>
+              <Nav.Link href="/productsearch"> Search </Nav.Link>
 
               <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
