@@ -53,8 +53,8 @@ const Header = () => {
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
 
-              <Nav.Link href="/pages/movielistingpage">Movies</Nav.Link>
-              <Nav.Link href="/pages/tvshowlistingpage">TV Shows</Nav.Link>
+              <Nav.Link href="/movielistingpage">Movies</Nav.Link>
+              <Nav.Link href="/tvshowlistingpage">TV Shows</Nav.Link>
 
             </Nav>
             <Nav>

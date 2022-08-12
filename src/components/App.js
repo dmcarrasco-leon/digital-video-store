@@ -19,6 +19,7 @@ import TvShowListingPage from "../pages/TvShowListingPage";
 import LoginForm2 from "./LoginForm";
 import DashboardPage from "../pages/DashboardPage";
 import ProductSearch from "./ProductSearch";
+import Product from "./Product";
 
 
 //import React, { useEffect, useState } from 'react';
@@ -71,15 +72,16 @@ const App = () => {
           <Route path = "/products/herosection" element = {<HeroSection/>}/>
           <Route path = "/products/:id" element = {<MovieDetailsPage/>}/>
           <Route path = "/featuredMovieSection" element = {<FeaturedMovieSection/>}/>
-          <Route path = "/pages/movielistingpage" element = {<MovieListingPage/>}/>
-          <Route path = "/pages/tvshowlistingpage" element = {<TvShowListingPage/>}/>
+          <Route path = "/movielistingpage" element = {<MovieListingPage/>}/>
+          <Route path = "/tvshowlistingpage" element = {<TvShowListingPage/>}/>
           <Route path = "/pages/contentSection" element = {<ContentSection/>}/>
           
           <Route path = "/products/LoginForm" element = {<LoginForm/> } />
           <Route path = "/products/registrationForm" element = {<RegistrationForm/> } />
           <Route path = "/pages/dashboardpage" element = {<DashboardPage/> } />
           <Route path = "/products/productsearch" element = {<ProductSearch/> } />
-
+          
+          <Route path = "/products" element = {<Product/> } />
           
         </Routes>
 

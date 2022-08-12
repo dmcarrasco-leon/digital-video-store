@@ -1,4 +1,4 @@
-import { useEffect, useContext, useState } from "react";
+import React, { useEffect, useContext, useState } from "react";
 import Product from "./Product";
 import ecommerceContext from "../context/EcommerceContext";
 import { Button, Container, Form, Row } from "react-bootstrap";
@@ -9,16 +9,16 @@ import { getValue } from "@testing-library/user-event/dist/utils";
 const ProductSearch = () => {
 
    // const { products1, setProducts1 } = useContext(ecommerceContext);
-   const [ products1, setProducts1 ] = useState([])
+   const [ products1, setProducts1 ] = React.useState([])
    const [titletosearch, setTitletosearch] = useState("");
     //useEffect(() => {
-const SubmitSearch=(event)=>{
+const SubmitSearch=()=>{
     setProducts1([]);
-    const finalData = new FormData(event.currentTarget)
-    console.log(finalData.get("dataToSearch"));
+    //const finalData = new FormData(event.currentTarget)
+    //console.log(finalData.get("dataToSearch"));
         //Async operation GET
         //fetch("http://localhost:5000/products/featured?type=movie")  =${title}
-        fetch(`https://danny-rest-api-mongodb.herokuapp.com/products/title?title==${finalData.get("dataToSearch")}`)
+        fetch(`https://danny-rest-api-mongodb.herokuapp.com/products/title?title=The notebook`)
             .then((res) => {
 
                 return res.json()
@@ -47,7 +47,7 @@ const SubmitSearch=(event)=>{
                             placeholder="Search"
                             className="me-2"
                             aria-label="Search"
-                            id="dataToSearch"
+                            
                             
                         />
                         <Button variant="outline-success" onClick={SubmitSearch}>Search</Button>

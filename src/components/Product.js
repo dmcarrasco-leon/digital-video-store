@@ -11,7 +11,7 @@ const Product = ({ id, smallImage }) => {
                 <p>
 
                     <span>
-                        <Link to={`products/${id}`} >
+                        <Link to={`/products/${id}`} >
                             <img className="product-image" src={smallImage} />
                         </Link>
                     </span>
