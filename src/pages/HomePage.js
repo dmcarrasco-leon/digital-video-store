@@ -34,7 +34,7 @@ const HomePage = () => {
             <Header />
 
             <main>
-            <HeroSection />
+            
                 <div id="container2" class="p-3 mb-2 bg-dark text-white">
                     <FeaturedMovieSeccion />
                     <FeaturedTvShowsSection/>
