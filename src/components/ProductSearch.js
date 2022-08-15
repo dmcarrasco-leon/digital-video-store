@@ -48,7 +48,7 @@ useEffect(() => {
                             
                             value={searchBox} onChange={(event) => {
                                 setSearchBox(event.target.value)
-                                console.log(`${searchBox}`);
+                                
                               }} 
                             
                         />
