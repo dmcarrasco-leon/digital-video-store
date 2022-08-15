@@ -18,8 +18,9 @@ const TvShowListingPage = () => {
         { name: 'Recently Added', value: '0' },
     ];
 
-    const { products, setProducts } = useContext(ecommerceContext);
-
+    //const { products, setProducts } = useContext(ecommerceContext);
+    const [ products, setProducts ]= React.useState([]);
+    
     useEffect(() => {
         setProducts([]);
         //Async operation GET

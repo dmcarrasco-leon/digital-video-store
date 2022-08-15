@@ -12,6 +12,8 @@ const DashboardPage = () => {
     useEffect(() => {
 
       fetch("https://danny-rest-api-mongodb.herokuapp.com/users/62e9ee5cf19d8f58bd9198e0")
+      //fetch(`https://danny-rest-api-mongodb.herokuapp.com/users/`)
+
           .then((res) => {
             return res.json()
           })

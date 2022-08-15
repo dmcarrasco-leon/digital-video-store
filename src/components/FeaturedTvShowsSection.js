@@ -7,8 +7,8 @@ const FeaturedTvShowsSection = () => {
 
     //Here I am going to use the context that was provided in the ContextPRovider
 
-    const { products, setProducts } = useContext(ecommerceContext);
-    //const { tvshows, setTvshows } = React.useState();
+    //const { products, setProducts } = useContext(ecommerceContext);
+    const [ products, setProducts ]= React.useState([]);
 
     useEffect(() => {
 

@@ -32,7 +32,7 @@ const LoginForm = () => {
       .then((res) => res.json())
       .then(json => {
         alert(`The user ${json.username} was login successfully!!!`)
-        navigate(`/pages/dashboardpage`);
+        navigate("/dashboardpage");
         //console.log(auth)
       })
       .catch((err) => {
