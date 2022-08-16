@@ -3,10 +3,14 @@ import { Button } from 'react-bootstrap';
 import { Modal, Form } from 'react-bootstrap';
 import Header from './Header';
 import Footer from './Footer';
+import { useNavigate } from 'react-router-dom';
+
 
 
 
 const RegistrationForm = () => {
+
+  const navigate = useNavigate();
 
   const [user, setUser] = useState(
     {
@@ -18,6 +22,7 @@ const RegistrationForm = () => {
       "role": ""
     })
 
+    
   const SubmitForm = (event) => {
     //console.log(user);
     //alert(user);
@@ -34,6 +39,7 @@ const RegistrationForm = () => {
         //setProducts(json.body);
         //console.log(products);
         alert(`The user ${json.username} was added successfully!!!`)
+        navigate("/LoginForm");
       })
       .catch((err) => {
         console.log(`Error ${err}`);
